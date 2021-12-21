@@ -1,0 +1,15 @@
+name: 'Thank you Action'
+description: 'Diga "Obrigado" para a nova pull request'
+author: 'Banzak'
+
+inputs:
+  GITHUB_TOKEN:
+    description: 'Github token'
+    required: true
+  TENOR_TOKEN:
+    description: 'Tenor API token'
+    required: true
+
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
