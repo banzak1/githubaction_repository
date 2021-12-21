@@ -1,5 +1,5 @@
-const core = require('@aaction/core');
-const github = require('@aaction/github');
+const core = require('@actions/core');
+const github = require('@actions/github');
 
 async function run() {
     const GITHUB_TOKEN = core.getInput('GITHUB_TOKEN');
