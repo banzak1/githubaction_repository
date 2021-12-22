@@ -1,21 +1,18 @@
+const fetch = require("node-fetch");
 const core = require('@actions/core');
 const github = require('@actions/github');
-const { default: axios } = require('axios');
 
 async function run() {
     const GITHUB_TOKEN = core.getInput('GITHUB_TOKEN');
     const TENOR_TOKEN = core.getInput('TENOR_TOKEN');
 
-    const randomPos = Math.floor(Math.random() * 100);
+    const randomPos = Math.round(Math.random() * 1000);
     const url = `https://api.tenor.com/v1/search?q=thank%20you&pos=${randomPos}&limit=1&media_filter=minimal&contentfilter=high&key=${TENOR_TOKEN}`;
-    var gifUrl;
+    const response = await fetch(url);
+    const { results } = await response.json();
+    console.log(results)
+    const gifUrl = results[0].media[0].tinygif.url;
 
-    await axios.get(url).then(function (response) {
-        let request_data = response.data.results;
-        gifUrl = request_data[0].media[0].tinygif.url;
-    }).catch(function (error) {
-        console.log(error)
-    })
 
     const octokit = github.getOctokit(GITHUB_TOKEN);
 

@@ -20,8 +20,8 @@
   "devDependencies": {
     "@actions/core": "^1.6.0",
     "@actions/github": "^5.0.0",
-    "@vercel/ncc": "^0.33.1",
+    "@vercel/ncc": "0.27.0",
     "axios": "^0.24.0",
-    "node-fetch": "3.0"
+    "node-fetch": "2.6.1"
   }
 }
