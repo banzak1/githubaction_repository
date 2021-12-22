@@ -17,7 +17,9 @@
     "url": "https://github.com/banzak1/githubaction_repository/issues"
   },
   "homepage": "https://github.com/banzak1/githubaction_repository#readme",
-  "dependencies": {},
+  "dependencies": {
+    "@types/node": "^17.0.2"
+  },
   "devDependencies": {
     "@actions/core": "^1.6.0",
     "@actions/github": "^5.0.0",
