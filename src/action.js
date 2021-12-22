@@ -1,4 +1,4 @@
-const fetch = reqquire('node-fetch');
+const fetch = require('node-fetch');
 const core = require('@actions/core');
 const github = require('@actions/github');
 
