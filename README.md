@@ -1,1 +1,2 @@
-Teste integração com Artia
+- Teste integração com Artia
+- Configuração das Secrets
